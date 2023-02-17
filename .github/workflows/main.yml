@@ -45,7 +45,7 @@ jobs:
           haxelib list
 
       - name: Compile
-        run: haxelib run lime build android -release
+        run: haxelib run lime build windows -release
 
       - name: Publish Artifact
         uses: actions/upload-artifact@main
