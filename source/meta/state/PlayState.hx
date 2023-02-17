@@ -112,56 +112,6 @@ class PlayState extends MusicBeatState
 	public var botplayText:FlxText;
 	public var botplaySubtext:FlxText;
 
-	public static var botplayQuotes:Map<String, Array<String>> = [
-		'safety-lullaby' => ['you took the safety part too seriously'],
-		'left-unchecked' => [
-			'its not that hard anymore i fixed it',
-			'the pendulums not tweened anymore please'
-		],
-		'lost-cause' => ['youre the lost cause', 'i know youre in botplay to stare at her ass'],
-		'frostbite' => [
-			'those psych engine ports go crazy',
-			'did you get a brain freeze?',
-			"Freakachu's in your insides rip your skin off do it now"
-		],
-		'insomnia' => [
-			'a mimir mode',
-			'dont fall asleep',
-			'did you fall asleep on your keyboard?',
-			'you really didnt wanna wake him up'
-		],
-		'monochrome' => ['hes an 11 year old corpse', 'did you need more time to type?'],
-		'missingno' => ['mew was under the truck', 'i hope your pc actually crashes'],
-		'brimstone' => [
-			'brimstone betadciu type beat',
-			'you probably played the leaked build',
-			"Buryman has more life than your will to fucking play",
-			'ge ge ge-get your hands back on your keyboard'
-		],
-		'amusia' => ['i am unamused', 'do you even have a sing?'],
-		'bygone-purpose' => ['scrimblini', 'you should jump off like alexis'],
-		'dissension' => [
-			'why should I play fair?',
-			// 'you seriously gonna cheat him again??' i dont think this one works sector
-		],
-		'death-toll' => [
-			'go to hell',
-			"take a bath in the magma",
-			"lmao are you scared of an old dude?",
-			"i have the high ground anakin"
-		],
-		'isotope' => ['we forgot to scrap it', 'Am I a joke to you?'],
-		'purin' => [
-			'hyperrealistic?!',
-			'purin',
-			"Hang out a bit with Nurse Joy",
-			'do NOT put your dick in those holes'
-		],
-		'pasta-night' => ['guess you got counterpicked', 'maybe the kiddie table is for you'],
-		'shinto' => ['peak 10/10 expreiuenc', "It's a her you fucking idiot"],
-		'shitno' => ['why is it so cold', 'you got cold feet']
-	];
-
 	public var botplaySine:Float = 0;
 
 	public static var campaignScore:Int = 0;
@@ -883,8 +833,6 @@ class PlayState extends MusicBeatState
 		botplayText.borderSize = 1.25;
 		add(botplayText);
 		botplayText.cameras = [dialogueHUD];
-		var quoteList:Array<String> = botplayQuotes.get(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
-		if (quoteList != null && quoteList.length > 0)
 		{
 			botplaySubtext = new FlxText(0, 0, 0, quoteList[FlxG.random.int(0, quoteList.length - 1)]);
 			botplaySubtext.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
