@@ -26,7 +26,7 @@ jobs:
           haxelib --quiet install flixel 5.0.0
           haxelib --quiet --never run lime setup
           haxelib --quiet install flixel-ui
-          haxelib --quiet install flixel-addons 2.11
+          haxelib --quiet install flixel-addons 2.11.0
           haxelib --quiet install hscript
           haxelib --quiet install hxcpp-debug-server
           haxelib --quiet git flxanimate https://github.com/Dot-Stuff/flxanimate.git
